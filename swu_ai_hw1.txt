@@ -1,0 +1,17 @@
+// This is homework 1 of CS 610, by Shangqi Wu. 
+
+// Initial state is that robot is at location a; location a and b, location b and c are directly connected respectively. 
+// Note that location a and c are not directly connected. 
+Initial state: At(Robot,a), Conn(a,b), Conn(b,c)
+
+// Goal state is that robot has moved to c. 
+Goal state: At(Robot,c)
+
+// Defined actions. 
+Actions:
+	// Action: the robot moving from location X to Y. 
+	Move(X,Y)
+	// The preconditions are that the robot is located at X, and location X and Y are directly connected. 
+	Preconditions: At(Robot,X), Conn(X,Y)
+	// The postcondition is that robot is located at Y, while other conditions are unchanged. 
+	Postconditions: !At(Robot,X), At(Robot,Y)
